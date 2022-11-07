@@ -1,8 +1,10 @@
-# Angular Laboratory
+# Vitae Angular Testing Noviembre
 
-> A sample project for Angular workshop demos
+> 🅰️ Curso de Angular Testing para Vitae
 
 - 🚚 Install dependencies `npm i`
+
+- 🧪 Execute `npm test`.
 
 - 🚀 Execute `npm run api` and `npm start` to run the app.
 
