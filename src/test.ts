@@ -1,11 +1,14 @@
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
 
+// ! added to use fakeAsync
+import 'zone.js';
+import 'zone.js/testing';
+
 import { getTestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting,
 } from '@angular/platform-browser-dynamic/testing';
-import 'zone.js/testing';
 
 declare const require: {
   context(
@@ -32,6 +35,6 @@ const pipesContext = require.context('./', true, /pipe.spec\.ts$/);
 const formsContext = require.context('./', true, /form.spec\.ts$/);
 const storeContext = require.context('./', true, /store.spec\.ts$/);
 const fullContext = require.context('./', true, /\.spec\.ts$/);
-const context = fullContext;
+const context = storeContext;
 // And load the modules.
 context.keys().forEach(context);
