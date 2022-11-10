@@ -30,11 +30,11 @@ getTestBed().initTestEnvironment(
 
 // Then we find all the tests.
 // ! different context for easy launch partial tests
-const servicesContext = require.context('./', true, /service.spec\.ts$/);
-const componentsContext = require.context('./', true, /component.spec\.ts$/);
-const pipesContext = require.context('./', true, /pipe.spec\.ts$/);
-const formsContext = require.context('./', true, /form.spec\.ts$/);
 const storeContext = require.context('./', true, /store.spec\.ts$/);
+const servicesContext = require.context('./', true, /service.spec\.ts$/);
+const pipesContext = require.context('./', true, /pipe.spec\.ts$/);
+const componentsContext = require.context('./', true, /component.spec\.ts$/);
+const formsContext = require.context('./', true, /form.spec\.ts$/);
 const fullContext = require.context('./', true, /\.spec\.ts$/);
 const context = storeContext;
 // And load the modules.
