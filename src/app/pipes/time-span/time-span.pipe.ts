@@ -10,9 +10,6 @@ export interface TimeSpan {
 })
 export class TimeSpanPipe implements PipeTransform {
   transform(value: TimeSpan, ...args: unknown[]): string {
-    if (!value) {
-      return '';
-    }
     return this.calculateTimeSpan(value);
   }
 
