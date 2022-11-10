@@ -13,6 +13,7 @@ export class OptionsService {
     return this.api.postOption$(endpoint, option);
   }
   deleteOption$(endpoint: string, option: Partial<Option>) {
+    if (!option.id) throw 'No id';
     return this.api.deleteOption$(endpoint, option.id || '');
   }
 }

@@ -76,11 +76,11 @@ fdescribe('The options service', () => {
     const inputEndPoint = 'agency-ranges';
     const inputPayload = { label: 'Asteroid', value: 'asteroid' };
     // Act
-    sut.deleteOption$(inputEndPoint, inputPayload);
+    expect(() => sut.deleteOption$(inputEndPoint, inputPayload)).toThrow();
     // Assert
-    const actual = double.deleteOption$;
-    const expectedEndPoint = 'agency-ranges';
-    const expectedPayload = '';
-    expect(actual).toHaveBeenCalledWith(expectedEndPoint, expectedPayload);
+    // const actual = double.deleteOption$;
+    // const expectedEndPoint = 'agency-ranges';
+    // const expectedPayload = '';
+    // expect(actual).toHaveBeenCalledWith(expectedEndPoint, expectedPayload);
   });
 });
