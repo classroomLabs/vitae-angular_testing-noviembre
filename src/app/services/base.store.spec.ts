@@ -119,4 +119,29 @@ describe('The BaseStore class', () => {
         expect(actual).toEqual(expected);
       });
   });
+  it('should select full state repetitively', () => {
+    // Arrange
+    type State = { destination: string };
+    const input: State = {
+      destination: 'The Moon',
+    };
+    const sut = new BaseStore(input);
+    const inputs = ['The Moon', 'Mars', 'Venus'];
+    let index = 0;
+    // Act
+    sut
+      .select$((state) => state.destination)
+      .subscribe((actual) => {
+        // Assert
+        const expected = inputs[index];
+        index++;
+        expect(actual).toEqual(expected);
+      });
+    sut.setState({
+      destination: 'Mars',
+    });
+    sut.setState({
+      destination: 'Venus',
+    });
+  });
 });

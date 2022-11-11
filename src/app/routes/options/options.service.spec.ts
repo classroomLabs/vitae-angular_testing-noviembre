@@ -1,7 +1,6 @@
 import { OptionsService } from './options.service';
 
-// import { TestBed } from '@angular/core/testing';
-fdescribe('The options service', () => {
+describe('The options service', () => {
   it('should call the api correct method', () => {
     // Arrange
     const double = jasmine.createSpyObj('ApiService', ['getOptions$']);
@@ -51,10 +50,6 @@ fdescribe('The options service', () => {
     expect(actual).toHaveBeenCalledWith(expectedEndPoint, expectedPayload);
   });
 
-  // DRY [seco] don`t repeat yourself
-  // DAMP [húmedo] descriptive and meaningful phrases
-  // WET [mojado] write everything twice
-
   it('should call the api delete with the correct endpoint and id', () => {
     // Arrange
     const double = jasmine.createSpyObj('ApiService', ['deleteOption$']);
@@ -75,12 +70,7 @@ fdescribe('The options service', () => {
     const sut = new OptionsService(double);
     const inputEndPoint = 'agency-ranges';
     const inputPayload = { label: 'Asteroid', value: 'asteroid' };
-    // Act
+    // Act & Assert
     expect(() => sut.deleteOption$(inputEndPoint, inputPayload)).toThrow();
-    // Assert
-    // const actual = double.deleteOption$;
-    // const expectedEndPoint = 'agency-ranges';
-    // const expectedPayload = '';
-    // expect(actual).toHaveBeenCalledWith(expectedEndPoint, expectedPayload);
   });
 });
