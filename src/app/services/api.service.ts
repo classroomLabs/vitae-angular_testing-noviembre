@@ -27,8 +27,11 @@ export class ApiService {
     return this.http.get<Agency>(`${this.agenciesUrl}/${agencyId}`);
   }
   postAgency$(agency: Agency): Observable<Agency> {
-    agency.id = this.utilsService.getHyphened(agency.name);
-    return this.http.post<Agency>(this.agenciesUrl, agency);
+    const payload = {
+      ...agency,
+      id: this.utilsService.getHyphened(agency.name),
+    };
+    return this.http.post<Agency>(this.agenciesUrl, payload);
   }
   deleteAgency$(agencyId: string): Observable<Agency> {
     return this.http.delete<Agency>(`${this.agenciesUrl}/${agencyId}`);
