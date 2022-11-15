@@ -14,6 +14,30 @@
 
 > [Repo Url](https://github.com/classroomLabs/vitae-angular_testing-noviembre)
 
+## Unit testing Jasmine alone
+
+- Base Store
+- Api Store
+
+## Jasmine Spy and test doubles
+
+- Options Service
+- TimeSpan Pipe
+
+## Test Bed: imports and providers
+
+- Utils Service
+- Api Service
+- Home Service
+
+## Component testing
+
+- Agencies Component
+
+## Component interaction testing
+
+## End to End testing
+
 ---
 
 <footer>
