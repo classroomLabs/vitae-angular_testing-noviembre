@@ -1,4 +1,7 @@
 import { ApiStore } from './api.store';
+
+// ! integration test depending on BaseStore
+
 describe('The ApiStore class ', () => {
   it('should set initial state', () => {
     const sut = new ApiStore();
@@ -40,17 +43,36 @@ describe('The ApiStore class ', () => {
     });
   });
   it('should add item', () => {
+    // Arrange
     const store = new ApiStore();
     const data = [{ destination: 'The Moon' }, { destination: 'Mars' }];
     store.setData(data);
     const newItem = { destination: 'Earth orbit' };
+    // Act
     store.addItem(newItem);
     store.selectState$().subscribe((actual) => {
+      // Assert
       const expected = [
         { destination: 'The Moon' },
         { destination: 'Mars' },
         { destination: 'Earth orbit' },
       ];
+      expect(actual.data).toEqual(expected);
+    });
+  });
+  it('should delete item', () => {
+    // Arrange
+    const store = new ApiStore();
+    const data = [{ destination: 'The Moon' }, { destination: 'Mars' }];
+    store.setData(data);
+    const newItem = { destination: 'Earth orbit' };
+    store.addItem(newItem);
+    // Act
+    store.deleteItem(newItem);
+    // Assert
+    store.selectState$().subscribe((actual) => {
+      // Assert
+      const expected = [{ destination: 'The Moon' }, { destination: 'Mars' }];
       expect(actual.data).toEqual(expected);
     });
   });

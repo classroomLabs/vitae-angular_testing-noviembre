@@ -14,7 +14,7 @@
 
 > [Repo Url](https://github.com/classroomLabs/vitae-angular_testing-noviembre)
 
-## Unit testing Jasmine alone
+## Unit and Integration testing Jasmine alone
 
 - Base Store
 - Api Store
