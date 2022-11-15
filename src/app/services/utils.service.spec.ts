@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { UtilsService } from './utils.service';
 
-fdescribe('The Utils Service', () => {
+describe('The Utils Service', () => {
   let sut: UtilsService;
 
   beforeEach(() => {
@@ -35,7 +35,7 @@ fdescribe('The Utils Service', () => {
   });
 });
 
-fdescribe('UtilsService', () => {
+describe('UtilsService', () => {
   let sut: UtilsService;
   let input: ActivatedRoute;
   const inputNotFoundParam = 'notFound';
