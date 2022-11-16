@@ -2,6 +2,11 @@
   "name": "vitae-angular_testing-noviembre",
   "version": "14.0.0",
   "description": "🅰️ Curso de Angular Testing para Vitae",
+  "website": "https://github.com/classroomLabs/vitae-angular_testing-noviembre",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/classroomLabs/vitae-angular_testing-noviembre.git"
+  },
   "author": {
     "name": "Alberto Basalo",
     "email": "albertobasalo@hotmail.com",

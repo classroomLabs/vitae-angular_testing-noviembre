@@ -1,5 +1,7 @@
 # Vitae Angular Testing Noviembre
 
+[Repository](https://github.com/classroomLabs/vitae-angular_testing-noviembre)
+
 > 🅰️ Curso de Angular Testing para Vitae
 
 - 🚚 Install dependencies `npm i`
@@ -12,23 +14,21 @@
 
 ---
 
-> [Repo Url](https://github.com/classroomLabs/vitae-angular_testing-noviembre)
+## Unit and Integration testing with only Jasmine alone
 
-## Unit and Integration testing Jasmine alone
-
-- Base Store
-- Api Store
+- Base Store (Unit)
+- Api Store (Integration)
 
 ## Jasmine Spy and test doubles
 
-- Options Service
-- TimeSpan Pipe
+- TimeSpan Pipe (Spy calls to DoC)
+- Options Service (Spy calls to DoC)
 
 ## Test Bed: imports and providers
 
-- Utils Service
-- Api Service
-- Home Service
+- Utils Service (inject a mock)
+- Api Service (HttpClientTestingModule)
+- Home Service (integrated -> imports vs isolated -> providers)
 
 ## Component testing
 
