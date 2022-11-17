@@ -95,7 +95,9 @@ export class AgenciesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loadAgencies();
+  }
 
   loadAgencies() {
     this.api.getAgencies$().subscribe((agencies) => {
