@@ -69,7 +69,7 @@ describe('The Agencies Component _deep dependency_', () => {
   });
 });
 
-fdescribe('The Agencies Component _presentation_', () => {
+describe('The Agencies Component _presentation_', () => {
   let component: AgenciesComponent;
   let fixture: ComponentFixture<AgenciesComponent>;
   let native: HTMLElement;
