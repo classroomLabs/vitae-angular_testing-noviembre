@@ -62,7 +62,16 @@ fdescribe('BookingsComponent', () => {
   it('should call onDeleteClick', () => {
     spyOn(component, 'onDeleteClick');
     const firstDeleteButton = debug.query(By.css('tbody>tr>td>button'));
-    firstDeleteButton.triggerEventHandler('click', null),
-      expect(component.onDeleteClick).toHaveBeenCalled();
+    firstDeleteButton.triggerEventHandler('click', null);
+    expect(component.onDeleteClick).toHaveBeenCalledWith('1');
+  });
+
+  it('should call onDeleteClick for each booking', () => {
+    spyOn(component, 'onDeleteClick');
+    const allDeleteButtons = debug.queryAll(By.css('tbody>tr>td>button'));
+    allDeleteButtons.forEach((b, i) => {
+      b.triggerEventHandler('click', null);
+      expect(component.onDeleteClick).toHaveBeenCalledWith(inputBookings[i].id);
+    });
   });
 });
