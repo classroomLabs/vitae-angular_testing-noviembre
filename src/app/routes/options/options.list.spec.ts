@@ -5,11 +5,12 @@ import { By } from '@angular/platform-browser';
 
 import { OptionsList } from './options.list';
 
-describe('OptionsList', () => {
+describe('The Options List component', () => {
   let component: OptionsList;
   let fixture: ComponentFixture<OptionsList>;
 
   beforeEach(async () => {
+    // ! hack; changeDetection to default
     await TestBed.configureTestingModule({
       declarations: [OptionsList],
     })
@@ -33,7 +34,13 @@ describe('OptionsList', () => {
     const actual = fixture.nativeElement.querySelectorAll('li');
     expect(actual.length).toBe(1);
   });
+
+  it('should emit delete event when delete button is clicked', () => {
+    // ToDo: implement
+  });
 });
+
+// * hosting the component in a test container
 
 @Component({
   template: `
@@ -50,6 +57,7 @@ class HostComponent {
 }
 
 fdescribe('The Options List hosted', () => {
+  // ! testing from the host perspective
   let component: HostComponent;
   let fixture: ComponentFixture<HostComponent>;
   let native: any;
