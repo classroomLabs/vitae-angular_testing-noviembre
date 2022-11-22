@@ -33,8 +33,13 @@
 ## Component testing
 
 - Agencies Component
+- Bookings Component
+- Options List (inside / outside)
+- Home Component (dependencies... )
 
 ## Component interaction testing
+
+- Trips Form (fill form)
 
 ## End to End testing
 
