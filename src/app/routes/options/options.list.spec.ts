@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 
 import { OptionsList } from './options.list';
 
@@ -75,10 +74,5 @@ fdescribe('The Options List hosted', () => {
   it('should sent an array to the list component', () => {
     const actualItems = native.querySelectorAll('li');
     expect(actualItems.length).toBe(1);
-  });
-  it('should emit delete event when click', () => {
-    const actualButton = fixture.debugElement.query(By.css('li>span'));
-    actualButton.triggerEventHandler('click', null);
-    expect(component.token).toBeTruthy();
   });
 });
