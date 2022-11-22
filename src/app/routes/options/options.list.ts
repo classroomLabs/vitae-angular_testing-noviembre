@@ -13,7 +13,7 @@ import { Option } from '@models/option.interface';
       <li *ngFor="let option of options">
         <em>{{ option.label }}</em> ➖
         <code>{{ option.value }}</code>
-        <span (click)="delete.emit(option)">🗑️</span>
+        <span name="delete" (click)="delete.emit(option)">🗑️</span>
       </li>
     </ul>
   `,
