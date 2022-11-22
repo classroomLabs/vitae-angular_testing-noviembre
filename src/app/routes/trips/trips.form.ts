@@ -8,16 +8,25 @@ import { TripsService } from './trips.service';
   template: `
     <ng-container *ngIf="agenciesState$ | async as agenciesState">
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <label>Destination</label>
-        <input type="text" formControlName="destination" />
-        <label>Agency</label>
-        <select formControlName="agencyId">
-          <option *ngFor="let agency of agenciesState.data" [value]="agency.id">
-            {{ agency.name }}
-          </option>
-        </select>
-        <label>Departure</label>
-        <input type="date" formControlName="startDate" />
+        <div>
+          <label>Destination</label>
+          <input type="text" formControlName="destination" />
+        </div>
+        <div>
+          <label>Agency</label>
+          <select formControlName="agencyId">
+            <option
+              *ngFor="let agency of agenciesState.data"
+              [value]="agency.id"
+            >
+              {{ agency.name }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <label>Departure</label>
+          <input type="date" formControlName="startDate" />
+        </div>
         <button type="submit">Submit</button>
       </form>
     </ng-container>
