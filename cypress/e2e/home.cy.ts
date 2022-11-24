@@ -32,13 +32,10 @@ describe('The Home page', () => {
     cy.get('a[href*="agencies"]').click();
   });
 
-  it(
-    'should not have a link to profile',
-    { defaultCommandTimeout: 5000 },
-    () => {
-      cy.get('a[href*="profile"]').should('not.exist');
-    }
-  );
+  it('should not have a link to profile', () => {
+    cy.wait(2000);
+    cy.get('a[href*="profile"]').should('not.exist');
+  });
 
   it('should not have orphaned links', { defaultCommandTimeout: 5000 }, () => {
     cy.get('a').should('not.have.attr', 'href', '#undefined');
