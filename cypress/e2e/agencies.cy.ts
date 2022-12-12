@@ -1,9 +1,9 @@
 describe('The agencies page with 4 items', () => {
   beforeEach(() => {
-    cy.visit('/agencies');
     interceptGet('agencies');
     interceptGet('agency-ranges');
     interceptGet('agency-statuses');
+    cy.visit('/agencies');
     cy.wait('@get_agencies');
     cy.wait('@get_agency-ranges');
     cy.wait('@get_agency-statuses');

@@ -23,17 +23,20 @@ import { Booking } from '@models/booking.interface';
       </article>
       <article>
         <app-input-control
+          ngDefaultControl
           formControlName="seats"
           label="Seats"
           type="number"
           [control]="form.get('seats')"
         ></app-input-control>
         <app-input-control
+          ngDefaultControl
           formControlName="premiumFood"
           label="Premium Food"
           type="checkbox"
         ></app-input-control>
         <app-options-control
+          ngDefaultControl
           formControlName="paymentMethod"
           label="Payment Method"
           [options]="paymentMethodOptions"
@@ -86,7 +89,7 @@ export class BookForm implements OnInit {
       ]),
       premiumFood: '',
       paymentMethod: new FormControl('credit-card', Validators.required),
-      date: new Date().toISOString(),
+      date: new Date().toISOString().substring(0, 10),
       status: 'Pending',
     });
   }

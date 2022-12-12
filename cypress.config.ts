@@ -17,4 +17,7 @@ export default defineConfig({
   env: {
     apiUrl: 'http://localhost:3000',
   },
+  screenshotOnRunFailure: true,
+  video: true,
+  videoCompression: 48,
 });
